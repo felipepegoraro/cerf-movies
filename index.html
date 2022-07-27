@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Movies</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="style/main.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<div class="navigation">
+				<div class="nav-left">
+					<img src="./assets/img/logo.svg" 
+						alt="my favorit films logo" width="87" height="64">
+
+					<ul class="navigation-items">	
+						<li title="filmes de comédia">
+							<!-- <a href="">Comédia</a> -->
+							<button class="main_button" id="Comedy" type="text" onclick="b_click()">Comédia</button>
+						</li>
+						<li title="filmes de terror">
+							<!-- <a href="">Terror</a> -->
+							<button class="main_button" id="Horror" type="text" onclick="b_click()">Terror</button>
+						</li>
+						<li title="filmes de ação">
+							<!-- <a href="">Ação</a> -->
+							<button class="main_button" id="Action" type="text" onclick="b_click()">Ação</button>
+						</li>
+						<li title="filmes de ficção">
+							<!-- <a href="">Ficção</a> -->
+							<button class="main_button" id="Sci-Fi" type="text" onclick="b_click()">Sci-Fi</button>
+						</li>
+						<li title="filmes de drama">
+							<!-- <a href="">Drama</a> -->
+							<button class="main_button" id="Drama" type="text" onclick="b_click()">Drama</button>
+						</li>
+						<li title="filmes animados">
+							<!-- <a href="">Drama</a> -->
+							<button class="main_button" id="Animation" type="text" onclick="b_click()">Animação</button>
+						</li>
+						<li title="qualquer genero">
+							<!-- <a href="">Drama</a> -->
+							<button class="main_button" id="undefined" type="text" onclick="b_click()">ALL</button>
+						</li>
+					</ul>
+
+					</div>
+					<div class="nav-left">
+						<div class="button">
+							<a target="_blank" href="https://github.com/felipepegoraro">
+								+ Me adicione</a>
+						</div>	
+					</div>
+			</div>
+
+			<div class="main-content">
+				<div class="main-info">
+					<h1 class="title">Procure seu filme favorito</h1>
+					<h3 class="subtitle">
+						digite o nome do seu filme e veja o que 
+						temos sobre ele.
+					</h3>
+				</div>
+
+				<div class="main-search">
+					<div class="search-bar">
+						<select class="search-select" id="search-select">
+							<option value="movie">Filmes</option>
+							<option value="series">Séries</option>
+							<option value="episodes">Epsódios</option>
+						</select>
+					</div>
+
+					<input class="search-input" type="text" name="" placeholder="busque por um filme">
+
+					<div class="search-icon">
+						<img src="./assets/icons/search.svg" alt="busque por um filme">
+					</div>
+
+				</div>
+
+				<div class="results-area">
+				</div>
+
+			</div>
+		</div>
+
+		<script src="./src/main.js"></script>
+	</body>
+</html>

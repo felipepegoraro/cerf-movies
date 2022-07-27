@@ -1,0 +1,242 @@
+/* fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=VT323&display=swap');
+
+:root {
+  --bg-dark:   #161819; /*#282828;*/
+	--bg-light:  #ececec;
+	--bg-white:  #ffffff;
+}
+
+body {
+	background-color: var(--bg-dark);
+	font-family: 'Poppins', 'sans-serif';
+	padding: 0px;
+	margin: 0px;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 15%;
+}
+
+.navigation { 
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15px;
+}
+
+.navigation .navigation-items, .nav-left, .nav-right {
+	display: flex;
+	align-items: center;
+}
+
+/* .nav-left ul li button { */ 
+.main_button {
+	border: none;
+	background: transparent;
+	color: #ececec; text-decoration: none;
+	font-size: 20px;
+}
+.main_button_selected {
+	color: #f473a3; text-decoration: underline;
+	font-size: 20px;
+}
+
+.nav-left ul li button:active,
+.nav-left ul li button:hover {
+	text-decoration: underline;
+	color: #78b1e0;
+	transition: all .4s ease;
+	-webkit-transition: all .4s ease;
+}
+
+
+
+.navigation-items li {
+	color: var(--bg-white);
+	margin: 0px 10px;
+	list-style: none;
+	cursor: pointer;
+}
+
+.navigation .button {
+	cursor: pointer;
+	background-color: var(--bg-dark);
+}
+
+.navigation .button a {
+	text-decoration: none;
+	color: var(--bg-white);
+	font-weight: 400px;
+	padding: 5px;
+	border: 1px solid var(--bg-white);
+	border-radius: 12px;
+	cursor: pointer;
+}
+
+.navigation .button a:active,
+.navigation .button a:hover {
+	border-radius: 12px;
+	cursor: pointer;
+	background-color: var(--bg-white);
+	color: var(--bg-dark);
+	transition: 1s;
+}
+
+.main-content {
+	margin-top: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+
+.main-info .title {
+	color: var(--bg-white);
+	text-align: center;
+	/* font-size: 40px; */	
+}
+.main-info .subtitle {
+	color: var(--bg-white);
+	text-align: center;
+	font-size: 15px;
+	opacity: 0.5;
+	margin: 3px 5px 5px 5px;
+}
+
+.main-search {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	background-color: #252728;
+	/* margin: 0 auto; */
+	margin: 20px auto;
+	border-radius: 10px;
+	align-items: center;
+}
+
+.search-select {
+	background: linear-gradient(#f473a3, #f473a3);
+	border: none;
+	padding: 10px;
+	margin: 10px 0 10px 10px;
+	color: #fff;
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 16px;
+}
+.search-input {
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	border-radius: 10px;
+	margin-left: 10px;
+	color: #ccc;
+	font-size: 14px;
+}
+
+.search-icon {
+	padding: 10px;
+}
+
+
+
+input:focus {
+	outline: none;
+}
+
+.results-area {
+	display: flex;
+	justify-content: start;
+	overflow-x: auto;
+	max-width: 100%;
+	margin-bottom: 30px !important;
+}
+.results-area h2 {
+	color: #ececec;
+}
+
+.results-item {
+	margin: 5px;
+	padding: 5px;
+	background-color: #080808;
+	border-radius: 10px;
+	max-width: 150px;
+}
+.results-item img {
+	min-height: 224px;
+	max-width: 150px;
+}
+.results-item .movie-title a {
+	color: white;
+}
+
+.results-item .movie-title a:active,
+.results-item .movie-title a:hover {
+	color: #78b1e0;
+	transition: all .4s ease;
+	-webkit-transition: all .4s ease;
+}
+.results-item h3, .results-item p {
+	color: #ececec;
+	margin: 3px;
+}
+
+.results-area::-webkit-scrollbar {
+	background: transparent;
+	color: #ececec;
+}
+
+.results-area {
+	scrollbar-color: #ececec transparent;
+	margin-bottom: 5px;
+}
+
+
+@media screen and (max-width: 375px) {
+	* {
+		padding: 0px;
+		margin: 3px;
+	}
+	.container {
+		padding: 3px 10px;
+	}
+
+	.navigation {
+		display: flex;
+		flex-direction: column;
+	}
+	.nav-left {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.nav-left ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.nav-left li button {
+		font-size: 16px;
+	}
+	.navigation .button a {
+		font-size: 12px;
+	}
+
+	.main-search {
+		margin: 10px auto;
+	}
+  .search-select {
+		padding: 10px;
+		margin: 5px 0px 5px 10px;
+	}
+	.search-icon {
+		padding: 0px;
+		margin: 5px 10px 3px 3px;
+	}
+	.results-area {
+		margin-bottom: 10px;
+	}
+}
